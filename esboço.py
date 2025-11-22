@@ -1,5 +1,4 @@
 from datetime import datetime
-from fastapi import FastAPI
 from google import genai
 from dotenv import load_dotenv
 import os
