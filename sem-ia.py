@@ -12,13 +12,14 @@ class ActivityRequest(BaseModel):
 
 
 def atividades(cidade, resultados):
-    resposta = f'''Em {cidade}, o sol nasce às {resultados['sunrise']}. Aqui vão duas sugestões para aproveitar esse momento:\n
-            Caminhada leve ou uma corrida ao ar livre.\n
-            Tomar um café observando o amanhecer.\n\n
-        
-            O pôr do sol acontece às {resultados['sunset']}.\n
-            Curtir um happy hour com os amigos ou familiares.\n
-            Caminhar pela orla ou parque observando o por do sol.'''
+    resposta = resposta = (
+        f"Em {cidade}, o sol nasce às {resultados['sunrise']}. Sugestões para aproveitar esse momento:\n"
+        f"- Caminhada leve ou uma corrida ao ar livre.\n"
+        f"- Tomar um café observando o amanhecer.\n\n"
+        f"O pôr do sol acontece às {resultados['sunset']}.\n"
+        f"- Curtir um happy hour com os amigos ou familiares.\n"
+        f"- Caminhar pela orla ou parque observando o pôr do sol."
+    )
 
     return resposta
 
